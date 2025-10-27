@@ -1,0 +1,24 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: spring-hello
+  labels:
+    app: spring-hello
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: spring-hello
+  template:
+    metadata:
+      labels:
+        app: spring-hello
+    spec:
+      imagePullSecrets:
+      - name: ghcr-secret # <-- tạo secret để đăng nhập GHCR (nếu cần)
+      containers:
+      - name: spring-hello
+        image: ghcr.io/haiduong-code/spring-hello:latest
+        imagePullPolicy: IfNotPresent
+        ports:
+        - containerPort: 8080
