@@ -18,7 +18,7 @@ spec:
       - name: ghcr-secret # <-- tạo secret để đăng nhập GHCR (nếu cần)
       containers:
       - name: spring-hello
-        image: ghcr.io/haiduong-code/spring-hello:latest
+        image: ghcr.io/haiduong-code/spring-hello:63132e21dbb566d62c8be6def46f86482e7121c6
         imagePullPolicy: IfNotPresent
         ports:
         - containerPort: 8080
