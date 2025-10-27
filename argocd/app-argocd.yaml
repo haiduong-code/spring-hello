@@ -6,7 +6,7 @@ metadata:
 spec:
   project: default
   source:
-    repoURL: 'https://github.com/haiduong-code/YOUR_REPO'
+    repoURL: 'https://github.com/haiduong-code/spring-hello'
     targetRevision: main
     path: k8s
   destination:
